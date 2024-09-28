@@ -1,44 +1,85 @@
 *{
-  box-sizing: border-box;
-  font-family: "Bebas Neue", sans-serif;
   margin: 0;
   padding: 0; 
 }
 body{
-  display: flex;
-  justify-content: center;
-  -ms-align-items: center;
-  align-items: center;
   min-height: 100vh;
   background-color: #1E0342;
   background: radial-gradient(circle, #24246e, #06051f);
-  /*isolation: isolate;*/
-  overflow: hidden;
-  position: relative;
-  width: 100vw;
-  height: 100vh;
+  margin:0;
+  padding:0;
+  font-size: 15px;
+  font-family: "Kanit", sans-serif;
 }
 .container{
-  background: rgba(131, 94, 94, 0.1);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(8.8px);
-  -webkit-backdrop-filter: blur(8.8px);
-  border: 1px solid rgba(131, 94, 94, 0.05);
-  height: 100px;
-  width: 500px;
-  position: relative;
   display:flex;
-  justify-content: center;
-  align-content:center;
-  -ms-align-items: center;
-  overflow:hidden;
+  padding-top: 50px;
+  justify-content:center;
+  
 }
-.container h1{
-  color:#E2BBE9;
-  text-shadow:2px 2px black;
-  font-size: 1.3em;
-  display:flex;
-  justify-content: center;
-  align-items:center;
+.collapse{
+  max-width:450px;
+  overflow:hidden;
+  font-weight:500;
+}
+.collapse input{
+  display:none;
+}
+.collapse label{
+  position:relative;
+  font-weight:600;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 5px 11px rgba(0,0,0,.1), 0 4px 11px 0 rgba(0,0,0,.08);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.92);
+  color:#c0b3d1;
+  display:block;
+  margin-bottom: 10px;
+  cursor:pointer;
+  padding: 15px ;
+  border-radius: 4px;
+  z-index: 1;
+}
+.collapse label::after{
+  content:'';
+  position:absolute;
+  right: 15px;
+  top: 15px;
+  width: 18px;
+  height: 18px;
+  background:url("right-arrow.svg") 0 0;
+  transition: all 0.5s ease;
+}
+
+.collapse input:checked + label:after{
+  transform:rotate(90deg);
+}
+.collapse-text{
+  max-height: 1px;
+  overflow:hidden;
+  border-radius: 4px;
+  line-height:1.4;
+  position:relative;
+  top: -100%;
+  opacity:0.5;
+  transition: all 0.5s ease;
+}
+.collapse input:checked ~ .collapse-text{
+   max-height: 300px;
+  padding-bottom: 25px;
+  background:#fff;
+  box-shadow: 0 5px 11px rgba(0,0,0,.1), 0 4px 11px 0 rgba(0,0,0,.08);
+  opacity:1;
+  top:0;
+}
+.collapse-text h2 {
+  margin-bottom:10px;
+  padding: 15px 15px 0;
+  color: #1E0342;
+}
+.collapse-text p{
+  padding-left:15px;
+  padding-right:15px;
+  color: #1E0342;
 }
