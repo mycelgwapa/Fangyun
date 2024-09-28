@@ -11,7 +11,11 @@
   "license": "ISC",
   "dependencies": {
     "@types/node": "^18.0.6",
-    "express": "^4.21.0"
+    "express": "^4.21.0",
+    "particles.js": "^2.0.0"
   },
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "pug": "^3.0.3"
+  }
 }
