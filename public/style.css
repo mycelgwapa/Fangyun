@@ -4,8 +4,8 @@
 }
 body{
   min-height: 100vh;
-  background-color: #1E0342;
-  background: radial-gradient(circle, #24246e, #06051f);
+  background-color: #a592bf;
+  background: radial-gradient(circle, #7777bb, #363375);
   margin:0;
   padding:0;
   font-size: 15px;
@@ -18,7 +18,7 @@ body{
   
 }
 .collapse{
-  max-width:450px;
+  max-width:400px;
   overflow:hidden;
   font-weight:500;
 }
@@ -28,12 +28,12 @@ body{
 .collapse label{
   position:relative;
   font-weight:600;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgb(238, 227, 227, 0.2);
   box-shadow: 0 5px 11px rgba(0,0,0,.1), 0 4px 11px 0 rgba(0,0,0,.08);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.92);
-  color:#c0b3d1;
+  border: 1px solid rgb(113, 106, 106, 0.92);
+  color:#f0ecf3;
   display:block;
   margin-bottom: 10px;
   cursor:pointer;
@@ -48,16 +48,17 @@ body{
   top: 15px;
   width: 18px;
   height: 18px;
-  background:url("right-arrow.svg") 0 0;
+  background:url("./assets/right-arrow.svg") 0 0;
+  color:#000;
   transition: all 0.5s ease;
 }
 
-.collapse input:checked + label:after{
+ .collapse input:checked + label:after{
   transform:rotate(90deg);
 }
 .collapse-text{
   max-height: 1px;
-  overflow:hidden;
+  overflow:auto;
   border-radius: 4px;
   line-height:1.4;
   position:relative;
@@ -68,18 +69,100 @@ body{
 .collapse input:checked ~ .collapse-text{
    max-height: 300px;
   padding-bottom: 25px;
-  background:#fff;
+   background: rgb(238, 227, 227, 0.2);  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   box-shadow: 0 5px 11px rgba(0,0,0,.1), 0 4px 11px 0 rgba(0,0,0,.08);
   opacity:1;
   top:0;
-}
+} 
 .collapse-text h2 {
-  margin-bottom:10px;
-  padding: 15px 15px 0;
-  color: #1E0342;
+  color:#f0ecf3;
+  margin-left:10px;
+  padding: 25px;
 }
-.collapse-text p{
-  padding-left:15px;
-  padding-right:15px;
-  color: #1E0342;
+.collapse-text img{
+  width:90px;
+  height:90px;
+  border-radius: 50%;
+  position:relative;
+  left:0;
+  padding: 20px;
+  float:left;
+  /* border: 1px solid rgb(113, 106, 106, 0.92);*/
+}
+
+/* Navbar Styles */
+.navbar {
+  position: absolute;
+  bottom: 2%; /* Adjust this value to move the navbar up or down from the bottom */
+  width: 100%; /* Ensure the navbar spans the width of the container */
+  text-align: center;
+ 
+}
+
+.nav-list {
+  list-style: none; /* Removes the dot from the list */
+  display: flex; /* Makes the list horizontal */
+  justify-content: center;
+  padding: 10px;
+  margin: 0;
+}
+
+.nav-list li {
+  margin: 0 15px;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #f0ecf3;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.nav-list a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 999; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Close button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }

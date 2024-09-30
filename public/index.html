@@ -1,36 +1,103 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" type="x-icon" href="Fangyuan.jpeg">
-  <title>方媛</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="x-icon" href="./assets/Fangyuan.jpeg"/>
+    <title>方媛</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome for Icons -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="collapse">
+        <input type="checkbox" id="collapse-head" />
+        <label for="collapse-head">I AM THE HONORED ONE.</label>
+        <div class="collapse-text">
+          <img src="./assets/Fangyuan.jpeg" alt="A picture of Fangyuan" />
 
-  <div class="container">
-    <div class="collapse"> 
-      <input type="checkbox" id="collapse-head">
-      <label for="collapse-head">I AM THE HONORED ONE.</label>
-      <div class="collapse-text">
-        <h2>Agustin Avila Paller Quirante</h2>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, possimus ipsa? Quae totam illum sint quia saepe vero ipsum voluptates perferendis. Ipsa vel porro impedit accusantium nihil blanditiis! Inventore, corrupti?
-        </p>
-        
-        
+          <h2>Agustin Avila Paller Quirante</h2>
+
+          <!-- Navigation Menu -->
+          <nav class="navbar">
+            <ul class="nav-list">
+              <li>
+                <a href="#about"
+                  ><span class="material-symbols-outlined">id_card</span></a
+                >
+              </li>
+              <li>
+                <a href="#photos"
+                  ><span class="material-symbols-outlined">
+                    photo_library
+                  </span></a
+                >
+              </li>
+              <li>
+                <a href="#contact"
+                  ><span class="material-symbols-outlined"> call </span></a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </div>
-  </div>
 
-  
-</body>
+    <div id="aboutModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>About Me</h2>
+        <p>I am Agustin Avila Paller Quirante, a student at the University of the Philippines.</p>
+      </div>
+    </div>
+
+
+    <script>
+      // Get the modal
+      var modal = document.getElementById("aboutModal");
+
+      // Get the button that opens the modal
+      var aboutBtn = document.getElementById("aboutBtn");
+
+      // Get the <span> element that closes the modal
+      var closeBtn = document.getElementsByClassName("close")[0];
+
+      // When the user clicks the button, open the modal
+      aboutBtn.onclick = function() {
+        modal.style.display = "flex";
+      }
+
+      // When the user clicks on <span> (x), close the modal
+      closeBtn.onclick = function() {
+        modal.style.display = "none";
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+
+    </script>
+
+  </body>
 </html>
