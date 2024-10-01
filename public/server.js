@@ -11,12 +11,11 @@ app.get('/', (req, res) => {
 
   const uptimeString = `${hours}h ${minutes}m ${seconds}s`;
 
-  res.sendFile(__dirname + '/public/index.html', {
-    uptime: uptimeString
-  });
-});
+  // Log the uptime to the console
+  console.log(`Uptime: ${uptimeString}`);
 
-const port = 925;
-app.listen(port, () => {
-  console.log(`Working at ${port}`);
-});
+    res.sendFile(__dirname + '/public/index.html');
+  });
+
+
+module.exports = app; 

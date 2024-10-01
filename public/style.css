@@ -30,7 +30,6 @@ body{
   color:#f0ecf3;
   display:block;
   margin-bottom: 10px;
-  cursor:pointer;
   padding: 15px ;
   border-radius: 4px;
   z-index: 1;
@@ -45,6 +44,7 @@ body{
   background:url("./assets/right-arrow.svg") 0 0;
   color:#000;
   transition: all 0.5s ease;
+  cursor:pointer;
 }
 
  .collapse input:checked + label:after{
@@ -74,7 +74,7 @@ body{
 .collapse-text h2 {
   color:#f0ecf3;
   margin-left:10px;
-  padding: 25px;
+  padding: 15px;
 }
 .collapse-text img{
   width:90px;
@@ -90,7 +90,7 @@ body{
 /* Navbar Styles */
 .navbar {
   position: absolute;
-  bottom: 2%; /* Adjust this value to move the navbar up or down from the bottom */
+  bottom: 1%; /* Adjust this value to move the navbar up or down from the bottom */
   width: 100%; /* Ensure the navbar spans the width of the container */
   text-align: center;
  
@@ -100,7 +100,7 @@ body{
   list-style: none; /* Removes the dot from the list */
   display: flex; /* Makes the list horizontal */
   justify-content: center;
-  padding: 10px;
+  padding: 15px 15px 0;
   margin: 0;
 }
 
